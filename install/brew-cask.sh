@@ -19,7 +19,6 @@ apps=(
   macdown
   screenflow
   slack
-  sourcetree
   spotify
   sublime-text3
   virtualbox
