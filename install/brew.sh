@@ -15,21 +15,16 @@ apps=(
   battery
   coreutils
   dockutil
-  ffmpeg
   fasd
   gifsicle
   git
   git-extras
   gnu-sed --with-default-names
   grep --with-default-names
-  hub
   httpie
-  imagemagick
-  jq
   mackup
   peco
   psgrep
-  python
   shellcheck
   ssh-copy-id
   tree

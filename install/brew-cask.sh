@@ -10,26 +10,20 @@ apps=(
   alfred
   dash2
   dropbox
-  firefox
-  firefox-nightly
   flux
   glimmerblocker
   google-chrome
-  google-chrome-canary
   google-drive
   hammerspoon
   kaleidoscope
   macdown
-  opera
   screenflow
   slack
   sourcetree
   spotify
   sublime-text3
-  transmit
   virtualbox
   vlc
-  webstorm
 )
 
 brew cask install "${apps[@]}"

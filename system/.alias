@@ -5,6 +5,11 @@ alias g="git"
 alias v="vim"
 alias rr="rm -rf"
 
+# Git shortcuts
+alias gap="git add -p"
+alias gcm="git commit -m"
+alias gst="git status"
+
 # Default options
 
 alias rsync="rsync -vh"
