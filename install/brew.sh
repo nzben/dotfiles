@@ -27,6 +27,7 @@ apps=(
   psgrep
   shellcheck
   ssh-copy-id
+  thefuck
   tree
   vim
   wget
