@@ -20,7 +20,7 @@ apps=(
   screenflow
   slack
   spotify
-  sublime-text3
+  sublime-text
   virtualbox
   vlc
 )

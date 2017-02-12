@@ -9,6 +9,11 @@ alias rr="rm -rf"
 alias gap="git add -p"
 alias gcm="git commit -m"
 alias gst="git status"
+alias gco="git checkout"
+
+# Docker
+alias dc="docker-compose"
+alias dcup="docker-compose up"
 
 # Default options
 
