@@ -15,6 +15,9 @@ alias gco="git checkout"
 alias dc="docker-compose"
 alias dcup="docker-compose up"
 
+# TheFuck
+eval $(thefuck --alias)
+
 # Default options
 
 alias rsync="rsync -vh"
