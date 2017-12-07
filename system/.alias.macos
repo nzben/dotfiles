@@ -1,12 +1,18 @@
+# Copy pwd to clipboard
+
+alias cpwd="pwd|tr -d '\n'|pbcopy"
+
 # Shortcuts
 
-alias gg="$GIT_GUI"
+alias gg="$DOTFILES_GIT_GUI"
+
+alias cask="brew cask"
 
 alias chrome="open -a ~/Applications/Google\ Chrome.app"
 alias canary="open -a ~/Applications/Google\ Chrome\ Canary.app"
 alias firefox="open -a ~/Applications/Firefox.app"
 
-# Exclude MacOS specific files in ZIP archives
+# Exclude macOS specific files in ZIP archives
 
 alias zip="zip -x *.DS_Store -x *__MACOSX* -x *.AppleDouble*"
 
@@ -34,6 +40,11 @@ alias ql="qlmanage -p &>/dev/null"
 
 alias desktopshow="defaults write com.apple.finder CreateDesktop -bool true && killfinder"
 alias desktophide="defaults write com.apple.finder CreateDesktop -bool false && killfinder"
+
+# Recursively remove Apple meta files
+
+alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;"
+alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
 
 # Clean up LaunchServices to remove duplicates in the "Open With" menu
 

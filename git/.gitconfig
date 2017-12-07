@@ -7,35 +7,35 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-  editor = vim
+  editor = nano
   filemode = false
   trustctime = false
   autocrlf = input
+  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [alias]
-  st = status
-  sts = status -sb
-  stl = ls-files -m -o --exclude-standard
-  ci = commit
+  amend = commit --amend --reuse-message=HEAD
   br = branch
+  ci = commit
   co = checkout
+  contrib = shortlog --summary --numbered
   cr = clone --recursive
   df = diff --word-diff
-  unstage = reset --hard HEAD
+  g = grep --break --heading --line-number
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ld = "!sh -c \"git log --since '${1:-1} days ago' --oneline --author $(git config user.email)\" -"
+  lg = log -p
   ll = log --pretty=oneline --graph --abbrev-commit
   lm = log --pretty=format:'* %s (%h)'
-  lg = log -p
-  g = grep --break --heading --line-number
-  amend = commit --amend --reuse-message=HEAD
-  contrib = shortlog --summary --numbered
-  show-ignored = "! git clean -ndX | perl -pe 's/Would remove/Ignored:/'"
-  ld = "!sh -c \"git log --since '${1:-1} days ago' --oneline --author $(git config user.email)\" -"
+  patch = !git --no-pager diff --no-color
+  p = push
+  pf = push --force
   pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-
-[pager]
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
+  show-ignored = "! git clean -ndX | perl -pe 's/Would remove/Ignored:/'"
+  st = status
+  stl = ls-files -m -o --exclude-standard
+  sts = status -sb
+  unstage = reset --hard HEAD
 
 [color]
   ui = auto
@@ -53,10 +53,10 @@
   changed = green
   untracked = cyan
 [color "diff-highlight"]
-  oldNormal = "red bold"
-  oldHighlight = "red bold 52"
-  newNormal = "green bold"
-  newHighlight = "green bold 22"
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 
 [credential]
   helper = osxkeychain
@@ -82,6 +82,7 @@
 
 [diff]
   renames = copies
+  indentHeuristic = true
   tool = Kaleidoscope
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
@@ -99,4 +100,3 @@
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
-

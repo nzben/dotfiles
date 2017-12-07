@@ -1,8 +1,10 @@
-# Install Caskroom
+if ! is-macos -o ! is-executable brew; then
+  echo "Skipped: Homebrew-Cask"
+  return
+fi
 
 brew tap caskroom/cask
-brew install brew-cask
-brew tap caskroom/versions
+brew tap caskroom/fonts
 
 # Install packages
 
