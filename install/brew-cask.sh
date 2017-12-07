@@ -7,21 +7,17 @@ brew tap caskroom/versions
 # Install packages
 
 apps=(
-  alfred
-  dash2
   dropbox
   flux
   glimmerblocker
   google-chrome
-  google-drive
   hammerspoon
   kaleidoscope
   macdown
   screenflow
   slack
   spotify
-  sublime-text
-  virtualbox
+  visual-studio-code
   vlc
 )
 
