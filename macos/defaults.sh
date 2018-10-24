@@ -159,6 +159,9 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
+# Dark menubar
+defaults write -g NSRequiresAquaSystemAppearance -bool Yes
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
@@ -170,7 +173,7 @@ defaults write com.apple.finder QuitMenuItem -bool false
 defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
