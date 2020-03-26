@@ -28,8 +28,5 @@ brew "ssh-copy-id"
 brew "stow"
 brew "thefuck"
 brew "tree"
-<<<<<<< HEAD
-brew "mas"
-=======
 brew "wget"
->>>>>>> ba4fb907fb0c20d28126a604a8b67510152a4a46
+
