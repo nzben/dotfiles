@@ -24,8 +24,6 @@ alias rsync="rsync -vh"
 alias json="json -c"
 alias psgrep="psgrep -i"
 
-is-executable hub && eval "$(hub alias -s)" # alias git=hub
-
 # Global aliases
 
 if $(is-supported "alias -g"); then
@@ -89,7 +87,7 @@ unset METHOD
 # Miscellaneous
 
 alias hosts="sudo $EDITOR /etc/hosts"
-alias his="historie"
 alias quit="exit"
 alias week="date +%V"
 alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
+alias grip="grip -b"

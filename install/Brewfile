@@ -8,11 +8,11 @@ brew "diff-so-fancy"
 brew "dockutil"
 brew "fasd"
 brew "ffmpeg"
-brew "gnu-sed", args: ["with-default-names"]
+brew "gnu-sed"
 brew "goles/battery/battery"
-brew "grep", args: ["--with-default-names"]
+brew "grep"
+brew "grip"
 brew "httpie"
-brew "hub"
 brew "imagemagick"
 brew "jq"
 brew "lynx"
@@ -28,4 +28,8 @@ brew "ssh-copy-id"
 brew "stow"
 brew "thefuck"
 brew "tree"
+<<<<<<< HEAD
 brew "mas"
+=======
+brew "wget"
+>>>>>>> ba4fb907fb0c20d28126a604a8b67510152a4a46

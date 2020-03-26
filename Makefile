@@ -50,7 +50,7 @@ brew:
 bash: BASH=/usr/local/bin/bash
 bash: SHELLS=/private/etc/shells
 bash: brew
-	if ! grep -q $(BASH) $(SHELLS); then brew install bash bash-completion@2 && sudo append $(BASH) $(SHELLS) && chsh -s $(BASH); fi
+	if ! grep -q $(BASH) $(SHELLS); then brew install bash bash-completion@2 pcre && sudo append $(BASH) $(SHELLS) && chsh -s $(BASH); fi
 
 git: brew
 	brew install git git-extras
@@ -73,7 +73,7 @@ node-packages: npm
 	. $(NVM_DIR)/nvm.sh; npm install -g $(shell cat install/npmfile)
 
 gems: ruby
-	gem install $(shell cat install/Gemfile)
+	export PATH="/usr/local/opt/ruby/bin:$PATH"; gem install $(shell cat install/Gemfile)
 
 test:
 	bats test/*.bats
