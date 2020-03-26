@@ -28,4 +28,5 @@ brew "stow"
 brew "thefuck"
 brew "tree"
 brew "wget"
+brew "awscli"
 
